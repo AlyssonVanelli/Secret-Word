@@ -95,8 +95,8 @@ function App() {
 
     const uniqueLetters = [...new Set(letters)]
 
-    if (guessedLetters.length === uniqueLetters.length) {
-      setScore((actualScore) => actualScore + 100)
+    if (guessedLetters.length === uniqueLetters.length && gameStage === stages[1].name) {
+      setScore((actualScore) => actualScore += 100)
       startGame()
     }
 
